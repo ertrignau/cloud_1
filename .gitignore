@@ -1,0 +1,13 @@
+# AWS SSH keys
+cloud_1_key.pem
+
+# Terraform state
+*.tfstate
+*.tfstate.*
+
+# Terraform local files
+.terraform/
+.terraform.lock.hcl
+
+# Variables sensibles
+*.tfvars

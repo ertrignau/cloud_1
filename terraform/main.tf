@@ -14,7 +14,9 @@ resource "aws_instance" "web" {
 	ami				= "ami-0c6ebbd55ab05f070" # Ubuntu 22.04 (Paris)
 	instance_type	= "t2.micro"
 
-	key_name 		= var.key_name
+	key_name 		= cloud_1_key.pem
+
+	vpc_security_groups_ids	= [aws_security_group.web_sg.id]
 	
 	tags = {
 		Name = "web-vm"
@@ -25,7 +27,9 @@ resource "aws_instance" "db" {
 	ami				= "ami-0c6ebbd55ab05f070"
 	instance_type	= "t2.micro"
 	
-	key_name		= var.key_name
+	key_name		= cloud_1_key.pem
+
+	vpc_security_groups_ids = [aws_security_group.db_sg.id]
 
 	tags = {
 		Name = "db-vm"
