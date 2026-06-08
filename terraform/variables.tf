@@ -12,4 +12,6 @@
 
 variable "key_name" {
 	description = "AWS SSH key_name"
+	default		= "cloud_1_key"
 }
+
