@@ -11,7 +11,7 @@
 # **************************************************************************** #
 
 output "public_ip" {
-	value = aws_instance.cloud_1.public_ip
+	value = aws_instance.web.public_ip
 }
 
 output "db_ip" {

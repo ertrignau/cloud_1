@@ -10,14 +10,14 @@
 #                                                                              #
 # **************************************************************************** #
 
-resource "aws_instance" "cloud_1" {
+resource "aws_instance" "web" {
 	ami				= "ami-0c6ebbd55ab05f070" # Ubuntu 22.04 (Paris)
 	instance_type	= "t2.micro"
 
 	key_name 		= var.key_name
 	
 	tags = {
-		Name = "cloud_1-vm"
+		Name = "web-vm"
 	}
 }
 
